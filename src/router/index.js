@@ -82,79 +82,79 @@ const routes = [
   },
 
   // App pages (with MainLayout)
-  {
-    path: '/',
-    component: MainLayout,
-    children: [
-      {
-        path: 'dashboard',
-        name: 'dashboard',
-        component: () => import('@/views/dashboard/Dashboard.vue')
-      },
-      {
-        path: 'create-post',
-        name: 'create-post',
-        component: () => import('@/views/dashboard/CreatePost.vue')
-      },
-      // {
-      //   path: 'home',
-      //   name: 'home',
-      //   component: () => import('@/views/Home.vue')
-      // },
-      {
-        path: 'notifications',
-        name: 'notifications',
-        component: () => import('@/views/Notifications.vue')
-      },
-      {
-        path: 'messages',
-        name: 'messages',
-        component: () => import('@/views/Messages.vue')
-      },
-      {
-        path: 'collections',
-        name: 'collections',
-        component: () => import('@/views/Collections.vue')
-      },
-      {
-        path: 'subscriptions',
-        name: 'subscriptions',
-        component: () => import('@/views/Subscriptions.vue')
-      },
-      {
-        path: 'add-card',
-        name: 'add-card',
-        component: () => import('@/views/AddCard.vue')
-      },
-      {
-        path: 'profile',
-        name: 'profile',
-        component: () => import('@/views/Profile.vue')
-      },
-      {
-        path: 'user/:id',
-        name: 'user-profile',
-        component: () => import('@/views/UserProfile.vue')
-      },
-      {
-        path: 'more',
-        name: 'more',
-        component: () => import('@/views/More.vue')
-      },
-      {
-        path: 'settings',
-        name: 'settings',
-        component: () => import('@/views/setting/Settings.vue')
-      }
-      // {
-      //   path: '',
-      //   name: 'home',
-      //   component: () => import('@/views/auth/auth/Home.vue')
-      // },
-      // {
-      // }
-    ]
-  },
+  // {
+  //   path: '/',
+  //   component: MainLayout,
+  //   children: [
+  //     {
+  //       path: 'dashboard',
+  //       name: 'dashboard',
+  //       component: () => import('@/views/dashboard/Dashboard.vue')
+  //     },
+  //     {
+  //       path: 'create-post',
+  //       name: 'create-post',
+  //       component: () => import('@/views/dashboard/CreatePost.vue')
+  //     },
+  //     // {
+  //     //   path: 'home',
+  //     //   name: 'home',
+  //     //   component: () => import('@/views/Home.vue')
+  //     // },
+  //     {
+  //       path: 'notifications',
+  //       name: 'notifications',
+  //       component: () => import('@/views/Notifications.vue')
+  //     },
+  //     {
+  //       path: 'messages',
+  //       name: 'messages',
+  //       component: () => import('@/views/Messages.vue')
+  //     },
+  //     {
+  //       path: 'collections',
+  //       name: 'collections',
+  //       component: () => import('@/views/Collections.vue')
+  //     },
+  //     {
+  //       path: 'subscriptions',
+  //       name: 'subscriptions',
+  //       component: () => import('@/views/Subscriptions.vue')
+  //     },
+  //     {
+  //       path: 'add-card',
+  //       name: 'add-card',
+  //       component: () => import('@/views/AddCard.vue')
+  //     },
+  //     {
+  //       path: 'profile',
+  //       name: 'profile',
+  //       component: () => import('@/views/Profile.vue')
+  //     },
+  //     {
+  //       path: 'user/:id',
+  //       name: 'user-profile',
+  //       component: () => import('@/views/UserProfile.vue')
+  //     },
+  //     {
+  //       path: 'more',
+  //       name: 'more',
+  //       component: () => import('@/views/More.vue')
+  //     },
+  //     {
+  //       path: 'settings',
+  //       name: 'settings',
+  //       component: () => import('@/views/setting/Settings.vue')
+  //     }
+  //     // {
+  //     //   path: '',
+  //     //   name: 'home',
+  //     //   component: () => import('@/views/auth/auth/Home.vue')
+  //     // },
+  //     // {
+  //     // }
+  //   ]
+  // },
 
   // 404 page (standalone)
   {
