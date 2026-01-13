@@ -72,8 +72,9 @@ const routes = [
 
   {
     path: '/',
-    name: 'login',
-    component: () => import('@/views/auth/Home.vue')
+    name: '',
+    component: () => import('@/views/chlee/Landing.vue')
+    // component: () => import('@/views/auth/Home.vue')
   },
   {
     path: '/fansngage',
