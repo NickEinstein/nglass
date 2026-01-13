@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Your post "{{post_title}}" is under review</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .alert-box {
+          background-color: #4a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 40px;
+      }
+      .content h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+      .content p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 16px;
+      }
+      .alert-box {
+        background-color: #fff3cd;
+        border: 2px solid #ffc107;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 24px 0;
+      }
+      .post-info {
+        background-color: #f9f9f9;
+        padding: 16px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="https://fansngage.com/logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>⚠️ Content Under Review</h1>
+          <p>Hi <strong>{{creator_name}}</strong>,</p>
+          <p>
+            Your content has been flagged by a user and is currently under review by our moderation
+            team.
+          </p>
+
+          <div class="alert-box">
+            <p style="margin: 0; font-weight: 600; font-size: 16px; color: #1a1a1a">
+              📝 Review Status
+            </p>
+            <p style="margin: 12px 0 0 0; color: #4a4a4a; font-size: 15px">
+              We're reviewing your content to ensure it complies with our
+              <a href="{{community_guidelines_url}}" style="color: #e82264">Community Guidelines</a
+              >. This process typically takes 24-48 hours.
+            </p>
+          </div>
+
+          <div class="post-info">
+            <p style="margin: 0; font-weight: 600; color: #1a1a1a">Content Details:</p>
+            <p style="margin: 8px 0 0 0; color: #4a4a4a; font-size: 15px">
+              <strong>Post Title:</strong> "{{post_title}}"<br />
+              <strong>Posted on:</strong> {{post_date}}<br />
+              <strong>Post ID:</strong> {{post_id}}<br />
+              <strong>Flagged Reason:</strong> {{flag_reason}}
+            </p>
+          </div>
+
+          <p><strong>What happens next?</strong></p>
+          <ul style="text-align: left; color: #4a4a4a; font-size: 15px; line-height: 1.8">
+            <li>Our team will review the content within 24-48 hours</li>
+            <li>The post is temporarily hidden during review</li>
+            <li>You'll be notified once the review is complete</li>
+            <li>If approved, the post will be restored automatically</li>
+          </ul>
+
+          <p style="margin-top: 24px; font-size: 14px; color: #6a6a6a">
+            If you believe this was flagged in error, please
+            <a href="{{appeal_url}}" style="color: #e82264">submit an appeal</a>.
+          </p>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{community_guidelines_url}}">Community Guidelines</a> |
+            <a href="{{support_url}}">Contact Support</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

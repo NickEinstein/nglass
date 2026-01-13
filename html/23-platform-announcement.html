@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>New features live on FansNgage 🚀</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .feature-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 20px 30px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 160px;
+        height: auto;
+      }
+      .content {
+        padding: 30px;
+      }
+      .content h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+      }
+      .content p {
+        font-size: 15px;
+        color: #4a4a4a;
+        margin-bottom: 12px;
+      }
+      .feature-box {
+        background: linear-gradient(135deg, #fff5f8 0%, #ffe9f0 100%);
+        border-left: 4px solid #e82264;
+        padding: 24px;
+        margin: 20px 0;
+        border-radius: 8px;
+      }
+      .feature-box h3 {
+        font-size: 20px;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+      }
+      .feature-box h3 span {
+        font-size: 28px;
+        margin-right: 12px;
+        display: none;
+      }
+      .feature-box p {
+        margin: 0;
+        color: #4a4a4a;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      .feature-box ul {
+        margin: 12px 0 0 20px;
+        padding: 0;
+      }
+      .feature-box li {
+        color: #4a4a4a;
+        font-size: 15px;
+        margin-bottom: 8px;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 24px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+        .cta-button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="./logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>Exciting Updates Are Here!</h1>
+          <p>Hi <strong>{{name}}</strong>,</p>
+          <p>
+            We've just rolled out exciting new features to improve your FansNgage experience. Here's
+            what's new:
+          </p>
+
+          <div class="feature-box">
+            <h3><span>⚡</span> Faster Media Uploads</h3>
+            <p>
+              Upload photos and videos up to 3x faster with our improved compression and processing
+              system.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <h3><span>📊</span> Better Analytics Dashboard</h3>
+            <p>Get deeper insights into your performance with:</p>
+            <ul>
+              <li>Real-time engagement metrics</li>
+              <li>Audience demographics breakdown</li>
+              <li>Revenue forecasting tools</li>
+              <li>Content performance comparisons</li>
+            </ul>
+          </div>
+
+          <div class="feature-box">
+            <h3>New Payout Options</h3>
+            <p>
+              More flexibility with additional payout methods including cryptocurrency wallets,
+              PayPal, and instant transfers.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Enhanced Profile Customization</h3>
+            <p>
+              Personalize your profile with custom themes, banner layouts, and featured content
+              sections.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Smart Notifications</h3>
+            <p>
+              Stay updated with intelligent notifications that prioritize what matters most to you.
+            </p>
+          </div>
+
+          <p style="font-weight: 600; margin-top: 32px">Ready to explore?</p>
+
+          <div style="text-align: center">
+            <a href="{{explore_url}}" class="cta-button">Explore What's New</a>
+          </div>
+
+          <p style="margin-top: 32px; font-size: 14px; color: #6a6a6a; text-align: center">
+            Questions? Check out our
+            <a href="{{changelog_url}}" style="color: #e82264">detailed changelog</a> or
+            <a href="{{support_url}}" style="color: #e82264">contact support</a>.
+          </p>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{changelog_url}}">Full Changelog</a> |
+            <a href="https://fansngage.com/help">Help Center</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

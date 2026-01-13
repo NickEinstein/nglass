@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Your FansNgage payout is on the way 💸</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .payout-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 40px;
+      }
+      .content h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+      .content p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 16px;
+      }
+      .emoji {
+        font-size: 48px;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .payout-box {
+        background: linear-gradient(135deg, #6c3ae6 0%, #5a2bc4 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        margin: 24px 0;
+      }
+      .payout-box .amount {
+        font-size: 42px;
+        font-weight: 800;
+        margin: 16px 0;
+      }
+      .payout-box .label {
+        font-size: 14px;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .info-card {
+        background-color: #f9f9f9;
+        padding: 16px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .info-card .value {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+      }
+      .info-card .label {
+        font-size: 13px;
+        color: #6a6a6a;
+        text-transform: uppercase;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 14px 32px;
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 15px;
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+        .payout-box .amount {
+          font-size: 36px;
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="./logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>Payout Initiated!</h1>
+          <p>Hi <strong>{{creator_name}}</strong>,</p>
+          <p>
+            Great news! Your withdrawal request has been processed successfully and is on its way.
+          </p>
+
+          <div class="payout-box">
+            <div class="label">Payout Amount</div>
+            <div class="amount">{{amount}}</div>
+            <div class="label">Processing complete</div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="value">{{expected_date}}</div>
+              <div class="label">Expected Arrival</div>
+            </div>
+            <div class="info-card">
+              <div class="value">{{payout_method}}</div>
+              <div class="label">Payout Method</div>
+            </div>
+          </div>
+
+          <div style="background-color: #f9f9f9; padding: 16px; border-radius: 8px; margin: 24px 0">
+            <p style="margin: 0; font-size: 15px"><strong>Payout ID:</strong> {{payout_id}}</p>
+            <p style="margin: 8px 0 0 0; font-size: 15px">
+              <strong>Requested on:</strong> {{request_date}}
+            </p>
+          </div>
+
+          <p style="font-size: 14px; color: #6a6a6a">
+            Depending on your bank or payment provider, it may take 1-3 business days for the funds
+            to appear in your account.
+          </p>
+
+          <div style="text-align: center">
+            <a href="{{payout_details_url}}" class="cta-button">View Payout Details</a>
+          </div>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{earnings_url}}">View Earnings</a> |
+            <a href="{{payout_history_url}}">Payout History</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

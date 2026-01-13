@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>FansNgage wallet top-up successful 💰</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .balance-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 40px;
+      }
+      .content h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+      .content p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 16px;
+      }
+      .emoji {
+        font-size: 48px;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .balance-box {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        margin: 24px 0;
+      }
+      .balance-box .amount {
+        font-size: 42px;
+        font-weight: 800;
+        margin: 16px 0;
+      }
+      .balance-box .label {
+        font-size: 14px;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .transaction-details {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 24px 0;
+      }
+      .transaction-details p {
+        margin: 8px 0;
+        font-size: 15px;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 14px 32px;
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 15px;
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+        .balance-box .amount {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="./logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>Wallet Top-up Successful!</h1>
+          <p>Hi <strong>{{name}}</strong>,</p>
+          <p>Your FansNgage wallet has been topped up successfully.</p>
+
+          <div class="balance-box">
+            <div class="label">New Wallet Balance</div>
+            <div class="amount">{{balance}}</div>
+            <div class="label">Available to spend</div>
+          </div>
+
+          <div class="transaction-details">
+            <p><strong>Amount Added:</strong> {{amount}}</p>
+            <p><strong>Payment Method:</strong> {{gateway}}</p>
+            <p><strong>Transaction ID:</strong> {{transaction_id}}</p>
+            <p><strong>Date:</strong> {{transaction_date}}</p>
+          </div>
+
+          <p>
+            You can now use your wallet balance to subscribe to creators, purchase exclusive
+            content, and send tips!
+          </p>
+
+          <div style="text-align: center">
+            <a href="{{explore_url}}" class="cta-button">Explore Creators</a>
+          </div>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{wallet_url}}">View Wallet</a> |
+            <a href="{{billing_url}}">Transaction History</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

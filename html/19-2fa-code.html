@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Your FansNgage verification code</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .code-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 20px 30px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 160px;
+        height: auto;
+      }
+      .content {
+        padding: 30px;
+        text-align: center;
+      }
+      .content h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+      }
+      .content p {
+        font-size: 15px;
+        color: #4a4a4a;
+        margin-bottom: 12px;
+      }
+      .code-box {
+        background: linear-gradient(135deg, #6c3ae6 0%, #5a2bc4 100%);
+        color: white;
+        padding: 40px;
+        margin: 30px 0;
+        border-radius: 12px;
+      }
+      .code {
+        font-size: 56px;
+        font-weight: 800;
+        letter-spacing: 12px;
+        font-family: 'Courier New', monospace;
+        margin: 20px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .expiry {
+        font-size: 14px;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 16px;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+        .code {
+          font-size: 42px;
+          letter-spacing: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="./logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>Your Verification Code</h1>
+          <p>Hi <strong>{{name}}</strong>,</p>
+          <p>Use the code below to verify your identity:</p>
+
+          <div class="code-box">
+            <div
+              style="font-size: 14px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px"
+            >
+              Your One-Time Code
+            </div>
+            <div class="code">{{code}}</div>
+            <div class="expiry">⏱ Expires in 10 minutes</div>
+          </div>
+
+          <p style="font-size: 15px; color: #6a6a6a">
+            If you didn't request this code, please ignore this email or contact our support team if
+            you're concerned about your account security.
+          </p>
+
+          <p style="margin-top: 24px; font-size: 14px; color: #6a6a6a">
+            <strong>Never share this code with anyone.</strong> FansNgage staff will never ask for
+            your verification code.
+          </p>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{security_settings_url}}">Security Settings</a> |
+            <a href="{{support_url}}">Contact Support</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

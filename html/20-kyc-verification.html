@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Your FansNgage verification status</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .status-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 40px;
+      }
+      .content h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+      .content p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 16px;
+      }
+      .status-box {
+        padding: 30px;
+        margin: 24px 0;
+        border-radius: 12px;
+        text-align: center;
+      }
+      .status-box.approved {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        color: white;
+      }
+      .status-box.pending {
+        background: linear-gradient(135deg, #ffc107 0%, #ffed4e 100%);
+        color: #1a1a1a;
+      }
+      .status-box.rejected {
+        background: linear-gradient(135deg, #dc3545 0%, #f56c6c 100%);
+        color: white;
+      }
+      .status-icon {
+        font-size: 58px;
+        margin-bottom: 16px;
+      }
+      .status-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.9;
+      }
+      .status-text {
+        font-size: 32px;
+        font-weight: 800;
+        margin: 12px 0;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 24px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+        .status-text {
+          font-size: 26px;
+        }
+        .cta-button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="https://fansngage.com/logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>KYC Verification Update</h1>
+          <p>Hi <strong>{{creator_name}}</strong>,</p>
+          <p>We have an update regarding your identity verification.</p>
+
+          <div class="status-box {{status_class}}">
+            <div class="status-icon">{{status_emoji}}</div>
+            <div class="status-label">Verification Status</div>
+            <div class="status-text">{{status}}</div>
+          </div>
+
+          {{#if approved}}
+          <p>
+            🎉 Congratulations! Your identity has been verified. You now have access to all creator
+            features including payouts.
+          </p>
+          <div style="text-align: center">
+            <a href="{{dashboard_url}}" class="cta-button">Go to Dashboard</a>
+          </div>
+          {{/if}} {{#if pending}}
+          <p>
+            ⏳ Your documents are currently under review. We'll notify you once the verification is
+            complete (typically within 24-48 hours).
+          </p>
+          {{/if}} {{#if rejected}}
+          <p>We couldn't verify your identity with the documents provided.</p>
+          <div
+            style="
+              background-color: #f8d7da;
+              border: 1px solid #dc3545;
+              border-radius: 6px;
+              padding: 16px;
+              margin: 20px 0;
+              text-align: left;
+            "
+          >
+            <p style="margin: 0; font-weight: 600; color: #1a1a1a">Reason:</p>
+            <p style="margin: 8px 0 0 0; color: #4a4a4a; font-size: 15px">{{rejection_reason}}</p>
+          </div>
+          <p>Please upload new documents to complete your verification.</p>
+          <div style="text-align: center">
+            <a href="{{verification_url}}" class="cta-button">Complete Verification</a>
+          </div>
+          {{/if}} {{#if needs_documents}}
+          <div
+            style="
+              background-color: #fff3cd;
+              border: 1px solid #ffc107;
+              border-radius: 6px;
+              padding: 16px;
+              margin: 20px 0;
+              text-align: left;
+            "
+          >
+            <p style="margin: 0; font-weight: 600; color: #1a1a1a">📄 Documents Required:</p>
+            <ul style="margin: 12px 0 0 20px; color: #4a4a4a; font-size: 15px">
+              <li>Government-issued ID (passport, driver's license)</li>
+              <li>Proof of address (utility bill, bank statement)</li>
+              <li>Selfie holding your ID</li>
+            </ul>
+          </div>
+          <div style="text-align: center">
+            <a href="{{upload_documents_url}}" class="cta-button">Upload Documents</a>
+          </div>
+          {{/if}}
+
+          <p style="margin-top: 24px; font-size: 14px; color: #6a6a6a">
+            Need help? Visit our
+            <a href="{{kyc_help_url}}" style="color: #e82264">KYC verification guide</a> or contact
+            support.
+          </p>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{kyc_help_url}}">Verification Help</a> |
+            <a href="{{support_url}}">Contact Support</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>You have a new message on FansNgage 💌</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .message-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 40px;
+      }
+      .content h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+      .content p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 16px;
+      }
+      .emoji {
+        font-size: 48px;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .message-box {
+        background-color: #f9f9f9;
+        border-left: 4px solid #e82264;
+        padding: 20px;
+        margin: 24px 0;
+        border-radius: 6px;
+      }
+      .sender-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+      .sender-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        margin-right: 12px;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 24px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+        .cta-button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="./logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>New Message</h1>
+          <p>Hi <strong>{{name}}</strong>,</p>
+          <p><strong>{{sender_name}}</strong> just sent you a message on FansNgage.</p>
+
+          <div class="message-box">
+            <div class="sender-info">
+              <div class="sender-avatar">{{sender_initial}}</div>
+              <div>
+                <div style="font-weight: 600; color: #1a1a1a">{{sender_name}}</div>
+                <div style="font-size: 13px; color: #6a6a6a">{{time_ago}}</div>
+              </div>
+            </div>
+            <p style="margin: 0; color: #4a4a4a; font-size: 15px; line-height: 1.5">
+              {{message_preview}}
+            </p>
+          </div>
+
+          <div style="text-align: center">
+            <a href="{{chat_url}}" class="cta-button">Open Chat</a>
+          </div>
+
+          <p style="margin-top: 24px; font-size: 14px; color: #6a6a6a; text-align: center">
+            You can manage your notification preferences in your
+            <a href="{{settings_url}}" style="color: #e82264">account settings</a>.
+          </p>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{messages_url}}">View All Messages</a> |
+            <a href="{{settings_url}}">Notification Settings</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

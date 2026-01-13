@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Refund processed successfully</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #1a1a1a;
+          color: #f5f5f5;
+        }
+        .email-container {
+          background-color: #2d2d2d !important;
+        }
+        .info-box {
+          background-color: #3a3a3a !important;
+        }
+        .content h1,
+        .content p {
+          color: #f5f5f5 !important;
+        }
+      }
+      .email-wrapper {
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #e82264 0%, #c41d56 100%);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 40px;
+      }
+      .content h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+      }
+      .content p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 16px;
+      }
+      .info-box {
+        background-color: #d4edda;
+        border: 1px solid #28a745;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 24px 0;
+      }
+      .footer {
+        background-color: #f5f5f5;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #6a6a6a;
+      }
+      .footer-links a {
+        color: #e82264;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 24px 20px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-container">
+        <div class="header">
+          <img src="https://fansngage.com/logo-white.png" alt="FansNgage Logo" class="logo" />
+        </div>
+        <div class="content">
+          <h1>✅ Refund Processed</h1>
+          <p>Hi <strong>{{user_name}}</strong>,</p>
+          <p>
+            Your refund for transaction <strong>{{transaction_id}}</strong> has been processed
+            successfully.
+          </p>
+
+          <div class="info-box">
+            <p style="margin: 0; font-weight: 600; font-size: 18px; color: #1a1a1a">
+              Refund Details
+            </p>
+            <p style="margin: 16px 0 0 0; color: #4a4a4a; font-size: 15px">
+              <strong>Refund Amount:</strong> {{amount}}<br />
+              <strong>Original Transaction:</strong> {{transaction_id}}<br />
+              <strong>Original Purchase:</strong> {{purchase_description}}<br />
+              <strong>Refund Method:</strong> {{refund_method}}<br />
+              <strong>Processing Date:</strong> {{processing_date}}
+            </p>
+          </div>
+
+          <p style="font-size: 15px; color: #6a6a6a">
+            ⏱ <strong>Timeline:</strong> The refunded amount should appear in your account within
+            <strong>3-5 business days</strong>, depending on your bank or payment provider.
+          </p>
+
+          <p style="margin-top: 24px; font-size: 14px; color: #6a6a6a">
+            If you have any questions about this refund, please
+            <a href="{{support_url}}" style="color: #e82264">contact our support team</a>.
+          </p>
+        </div>
+        <div class="footer">
+          <p><strong>FansNgage</strong> – Connect with your favorite creators</p>
+          <div class="footer-links" style="margin: 16px 0">
+            <a href="{{billing_url}}">Transaction History</a> |
+            <a href="https://fansngage.com/help">Help Center</a>
+          </div>
+          <p style="margin-top: 12px; color: #999">© 2026 FansNgage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
